@@ -47,9 +47,9 @@
         /// <param name="value">The value to write to the pin</param>
         public override void Write(bool value)
         {
-			System.Diagnostics.Debug.WriteLine("GPIO pin " + _pin + " set to " + value);
-			base.Write(value);
-			_currentValue = value;
+		System.Diagnostics.Debug.WriteLine("GPIO pin " + _pin + " set to " + value);
+		base.Write(value);
+		_currentValue = value;
         }
         
         /// <summary>
@@ -58,9 +58,9 @@
         /// <returns>The value read from the pin</returns>
         public override PinState Read()
         {
-			System.Diagnostics.Debug.WriteLine("GPIO pin " + _pin + " reads as " + _currentValue);
-			base.Read();
-            return _currentValue ? PinState.High : PinState.Low;
+		System.Diagnostics.Debug.WriteLine("GPIO pin " + _pin + " reads as " + _currentValue);
+		base.Read();
+    		return _currentValue ? PinState.High : PinState.Low;
         }
         #endregion
     }
